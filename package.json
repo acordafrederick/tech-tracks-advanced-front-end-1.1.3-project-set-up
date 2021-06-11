@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export"
+  },
+  "name": "tech-tracks-advanced-front-end-1.1.3-project-set-up",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:acordafrederick/tech-tracks-advanced-front-end-1.1.3-project-set-up.git",
+  "author": "facorda <acorda.fred@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^10.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
