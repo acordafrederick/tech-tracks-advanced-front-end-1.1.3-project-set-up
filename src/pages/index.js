@@ -1,8 +1,10 @@
+import { getPostList } from '../utils/posts';
+
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const Home = () => {
+const Home = ({ postList }) => {
   return (
     <>
       <Head>
@@ -11,12 +13,21 @@ const Home = () => {
       <div className='page-wrapper'>
         <Header />
         <main>
-          <h2>Hello from UP Boutique!</h2>
+          <pre>{JSON.stringify(postList, null, 2)}</pre>
         </main>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
+};
+
+export const getStaticProps = () => {
+  const postList = getPostList();
+  return {
+    props: {
+      postList,
+    },
+  };
 };
 
 export default Home;
