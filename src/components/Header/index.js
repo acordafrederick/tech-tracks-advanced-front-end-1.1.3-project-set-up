@@ -1,9 +1,13 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const navItems = [
   {
-    path: '/about',
-    label: 'About',
+    path: "/about",
+    label: "About",
+  },
+  {
+    path: "/blog",
+    label: "Blog",
   },
 ];
 
@@ -11,7 +15,7 @@ const Header = () => {
   return (
     <header>
       <div>
-        <Link href='/'>
+        <Link href="/">
           <a>UP</a>
         </Link>
 

@@ -1,14 +1,13 @@
-import { getPostList } from "../utils/posts";
-
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import { getPostList } from "../../utils/posts";
 
-const Home = ({ postList }) => {
+const Blog = ({ postList }) => {
   return (
     <>
       <Head>
-        <title>UP Boutique</title>
+        <title>Blog // UP Boutique</title>
       </Head>
       <div className="page-wrapper">
         <Header />
@@ -21,6 +20,10 @@ const Home = ({ postList }) => {
   );
 };
 
+//getStaticProps() function here
+
+export default Blog;
+
 export const getStaticProps = () => {
   const postList = getPostList();
   return {
@@ -29,5 +32,3 @@ export const getStaticProps = () => {
     },
   };
 };
-
-export default Home;
